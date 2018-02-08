@@ -7,14 +7,21 @@ provider "digitalocean" {
 }
 
 # Create the instance
+resource "digitalocean_droplet" "bastion" {
+    image   = "centos-7-x64"
+    name    = "bastion"
+    region  = "AMS3"
+    size    = "1Gi"
+}
+
 resource "digitalocean_droplet" "master" {
     image   = "centos-7-x64"
-    name    = "master1"
+    name    = "bastion"
     region  = "AMS3"
-    size    = "512mb"
+    size    = "4Gi"
 }
 
 # Assign a Floating IP
-resource "digitalocean_floating_ip" "test" {
+resource "digitalocean_floating_ip" "master" {
   region     = "AM3"
 }
