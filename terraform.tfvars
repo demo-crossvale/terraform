@@ -1,3 +1,0 @@
-#TerraForm Variables
-
-do_token = "4a7c88ae41b541a22ccf1a2cb4ba6376e21be07c04e87dbe663368ef4bc11838"
