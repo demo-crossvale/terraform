@@ -11,17 +11,17 @@ resource "digitalocean_droplet" "bastion" {
     image   = "centos-7-x64"
     name    = "bastion"
     region  = "AMS3"
-    size    = "1Gi"
+    size    = "1G"
 }
 
 resource "digitalocean_droplet" "master" {
     image   = "centos-7-x64"
     name    = "bastion"
     region  = "AMS3"
-    size    = "4Gi"
+    size    = "4G"
 }
 
 # Assign a Floating IP
-resource "digitalocean_floating_ip" "master" {
-  region     = "AM3"
-}
+#resource "digitalocean_floating_ip" "master" {
+#  region     = "AM3"
+#}
